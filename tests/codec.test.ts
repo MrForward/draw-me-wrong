@@ -61,7 +61,7 @@ test("typical challenge leaves room for a short production URL", () => {
   };
   const encoded = encodeChallenge(manyPoints, 360);
   assert.ok(encoded.payload.length <= 360);
-  assert.ok(`https://draw-me-wrong.chitu-atukuri2000.chatgpt.site/#d=${encoded.payload}&day=2026-08-24`.length < 450);
+  assert.ok(`https://drawmewrong.fun/#d=${encoded.payload}&day=2026-08-24`.length < 450);
   assert.ok(encoded.simplified);
   assert.doesNotThrow(() => decodeChallenge(encoded.payload));
 });
